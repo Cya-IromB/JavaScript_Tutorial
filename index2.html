@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>型変換以降</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script>
+      let na = Number("ok");
+      let nu;
+      let ob = {
+        one : 1,
+        two : 2
+      }
+      let str = Number(" ");
+      let boolUn = Boolean(undefined);
+      let boolNu = Boolean(null);
+      let boolEmp = Boolean("");
+      let boolSp = Boolean(" ");
+
+      alert(boolEmp);
+      alert(boolSp);
+
+
+      alert(boolUn);
+      alert(boolNu);
+
+      alert(str);
+      alert(na);
+      alert(nu);
+      alert(ob.one);
+
+    </script>
+  </body>
+</html>
