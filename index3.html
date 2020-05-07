@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js3</title>
+</head>
+<body>
+  <script>
+    console.log(typeof Math);
+    console.log(typeof null);
+    console.log(typeof console.log);
+    console.log(typeof console.log("hello world"));
+    console.log(typeof add(1, 5));
+    console.log(typeof console.log("cons"));
+
+    let num = Number(10);
+    let nan = Number("not num");;
+
+    if(nan !== nan){
+      nan = 15;
+    }
+
+    console.log(nan);
+    console.log(num + nan);
+    console.log(add(num + "ok"));
+
+
+    function add(one, two){
+      if(Number(one) + Number(two) !== Number(one) + Number(two)) return 88888888;
+      return Number(one) + Number(two);
+    }
+  </script>
+
+</body>
+</html>
