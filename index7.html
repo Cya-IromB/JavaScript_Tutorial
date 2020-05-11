@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>ログインもどき</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      alert("login program");
+
+      let user = prompt("Admin?", "");
+
+      if(user === "Admin"){
+        let password = prompt("password?", "");
+
+        if (password === null) {
+          alert("きゃんせーーーーーーーーる")
+
+        }else if(password === "pass"){
+          alert("Welcome!!");
+
+        }else{
+          alert("What?");
+        }
+
+        }else if (user === null) {
+          alert("canceled");
+        }else{
+          alert("I don't know.");
+        }
+
+    </script>
+  </body>
+</html>
