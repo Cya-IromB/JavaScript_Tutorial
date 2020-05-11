@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>?三項演算子?</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      let prop = prompt("ok?");
+
+      let ans = (prop === "ok") ? "良いらしい" : "悪いらしい";
+      alert(ans);
+
+      let num = Number(prompt("なんか数値入れて"));
+
+      let ret =
+      (num === 0) ? "無難なものを選んだね。" :
+      (num === 1) ? "あー、わかる" :
+      (num >= 2) ? "ごめん、これ以上数えらんないわ。" :
+      "なにそれ意味わかんない…";
+
+      alert(ret);
+
+      alert("test str");
+
+      let tr = true;
+
+      (tr) && alert("okk");
+
+      alert("okktest end");
+
+    </script>
+  </body>
+</html>
