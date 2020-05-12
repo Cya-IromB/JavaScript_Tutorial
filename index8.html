@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>loop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      let ω = true;
+      let i = 0;
+
+// ぶっちゃけwhileでいいけど、ホントはこれがやりたかっただけ
+      for(;ω;){
+        alert("loop:" + i);
+
+        if(i >= 10)break;
+        i++;
+      }
+      alert("Loop End");
+
+      alert("promptで受け取った数までの奇数だけをコンソールに出力");
+      let prop = prompt("いくつまで？(自然数100まで対応)", "");
+      console.log("prop = " + prop);
+
+
+      if(prop < 100 || prop >= 0){
+        for(let i = 0; prop > i; i++){
+          if((i % 2) === 0) continue;
+
+          console.log("i = " + i);
+        }
+        alert("end");
+      }else{
+        alert("対応してません…");
+      }
+
+      alert("for to lalala");
+
+      lalala :
+      for(let i = 0; i <= 20; i++){
+        for(let j = 0; j <= 20; j++){
+          if(prompt("キャンセルボタンで抜け") == null) break lalala;
+
+        }
+        alert(`i = ${i}`);
+      }
+
+      alert(" end of lalala");
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
