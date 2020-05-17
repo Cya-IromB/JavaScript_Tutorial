@@ -9,6 +9,25 @@
 
   <body>
     <script>
+      //関数の中から関数外の変数にアクセスする（してしまう）
+      let test = 256;
+      console.log(test);
+      a();
+      console.log(test);
+
+      let testIn = 512;
+      console.log(testIn);
+      b();
+      console.log(testIn);
+
+      function a (){
+        test = 128;
+      }
+
+      function b() {
+        let testIn = 1024;
+      }
+
     </script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>function2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+
+      let a = 17;
+
+      console.log(checkAge2(a));
+
+
+      function checkAge(age) {
+        // 返すものが単純な二択の場合、三項演算子が使える
+        return (age > 18) ? true : confirm('Do you have your parents permission to access this page?');
+      }
+      function checkAge2(age) {
+        // trueかそれ以外の二択を返したい場合、||が使える
+        return (age > 18) || confirm('Do you have your parents permission to access this page?');
+      }
+      // 二つの数値のうち、値が小さい方を返す。
+      function compereMin(a,b){
+        return (a < b) ? a : b;
+      }
+      //aのb乗を返す
+      function pow (a,b){
+        let ret = 0;
+        for(let i = 1; i <= b; i++) ret = a * b;
+        return ret;
+      }
+
+
+    </script>
+  </body>
+</html>
