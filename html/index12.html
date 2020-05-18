@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>関数式</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      let f_hi = function(){
+        alert("hi");
+      };
+
+      let oi = f_hi;
+
+      f_hi();
+      oi();
+
+      f_hi = function(){
+        alert("okkkkk");
+      };
+
+      f_hi();
+      oi();
+    </script>
+  </body>
+</html>
