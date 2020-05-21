@@ -10,21 +10,25 @@
   <body>
     <script>
       let sum = (a,b) => a + b;
-      alert(sum(5,8));
+      console.log(sum(5,8));
 
       let two = x => x * 2;
-      alert(two(8));
+      console.log(two(8));
 
-      let alt = () => alert("oh!!!!!");
+      let alt = () => console.log("oh!!!!!");
       alt();
+
+      let follin = sum(500,3);
+      console.log(follin);
+
 
 
       //task
       const funcAsk = (question,yes,no) => confirm(question) ? yes() : no();
 
       funcAsk("Do you agree?",
-      () => alert("You agreed."),
-      () => alert("You canceled the execution.")
+      () => console.log("You agreed."),
+      () => console.log("You canceled the execution.")
       )
 
     </script>
