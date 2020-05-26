@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>オブジェクト</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      //object
+      //基本形
+      const obj1 = {
+        name: "oh!",
+        str: 10,
+        def: 11,
+        spd: 12,
+        mag: 13,
+        comment: undefined,
+        say: () => alert("hello"),
+        love: "best",
+        hate: "kirai",
+        age: 23,
+      }
+
+      const codesSort = {
+        "5": "five",
+        "3": "Trr",
+        "1": "one",
+        "4": "four"
+      }
+
+      const codesNum = {
+        "+5": "five",
+        "+3": "Trr",
+        "+1": "one",
+        "+4": "four"
+      }
+
+      obj1.say();
+      console.log(obj1.str);
+      console.log(obj1.def);
+      console.log(obj1.spd);
+      console.log(obj1.comment);
+
+      console.log(obj1.comment === undefined);
+
+      console.log("存在チェック");
+
+      console.log("comment" in obj1);
+      console.log("nai" in obj1);
+
+      console.log("----for(key in object)----");
+
+      for(let key in obj1){
+        //if(typeof obj1[key] === "object" || typeof obj1[key] === "function")continue;
+        console.log(`${key}: ${obj1[key]}`);
+      }
+
+      for(key in codesSort){
+        console.log("sort:" + codesSort[key]);
+      }
+
+      for(key in codesNum){
+        console.log("Num:" + codesNum[key]);
+      }
+
+    </script>
+  </body>
+</html>
