@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>object-task</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      //task1
+      const user = {};
+      console.log(user);
+      user.name = "John";
+      console.log(user);
+      user.surname = "Smith";
+      console.log(user);
+      user.name = "Pete";
+      console.log(user);
+      delete user.name;
+      console.log(user);
+
+      //task2
+      const task2 = {};
+      console.log("task2-1:" + isEmpty(task2));
+      task2["8:30"] = "get up";
+      console.log("task2-2:" + isEmpty(task2));
+
+      function isEmpty(object){
+        for(key in object){return false;}
+        return true;
+      }
+
+      //task3
+      const task3 = {
+        name: "Moi",
+        age: 21,
+      };
+      //動く
+      task3.name = "Hi";
+
+      //task4 給料計算
+      const salaries = {
+        Yamada: 200,
+        Tsushima: 180,
+        Ozawa: 300,
+        Honma: 280,
+        Kamakura: 160,
+      };
+
+      let sum = 0;
+
+      for(key in salaries){
+        console.log(salaries[key]);
+        sum += salaries[key];
+      }
+
+      console.log("total:" + sum);
+
+      //task5 全部*2
+      const task5 = {
+        width:200,
+        heigth:300,
+        title: "No Name",
+      };
+
+      for(key in task5)console.log(`old${key}:` + task5[key]);
+
+      multiplyNumeric(task5);
+
+      for(key in task5)console.log(`new${key}:` + task5[key]);
+
+      function multiplyNumeric(num){
+        for(key in num){
+          // console.log(`${num[key]} is ` + typeof num[key]);
+          if(typeof num[key] === "number")num[key] *= 2;
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
