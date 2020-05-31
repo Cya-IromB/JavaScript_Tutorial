@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>object3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <script>
+      const func = {
+        name: "ok",
+        hi() {alert(this.name);},
+      };
+
+      func.hi();
+
+      function funcLog(str) {
+        console.log(str);
+      }
+
+      func.logger = funcLog;
+
+      func.logger(func.name);
+
+      // オブジェクト内のアロー関数の検証
+      const objArrow = {
+        name: "Obja",
+        age: 24,
+        funcInFunc(){
+          const inFunc = () => console.log("func in function!");
+          const sum = (a,b) => a * b;
+
+          inFunc();
+          console.log(sum(this.age, 2));
+        },
+        level: 100,
+      };
+
+      objArrow.funcInFunc();
+
+  //task
+      const calc = {
+        read(){
+          this.a = +prompt("a=?", 0);
+          this.b = +prompt("b=?", 0);
+        },
+        sum(){return this.a + this.b},
+        mul(){return this.a * this.b},
+      };
+
+      calc.read();
+      console.log(`a:${calc.a}`);
+      console.log(`b:${calc.b}`);
+      console.log(`sum:${calc.sum()}`);
+      console.log(`mul:${calc.mul()}`);
+
+      // task - chain
+      const ladder = {
+        step: 0,
+        up(){this.step++; return this;},
+        down(){this.step--;  return this;},
+        show(){console.log("step = " + this.step); return this;},
+      };
+
+      ladder
+      .up()
+      .up()
+      .up()
+      .down()
+      .show();
+
+    </script>
+  </body>
+</html>
